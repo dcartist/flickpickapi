@@ -13,8 +13,9 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(
 	process.env.DB_URL || 'mongodb://localhost/flickpick-api',
 	{
-	  useNewUrlParser: true,
-	  useUnifiedTopology: true,
+		useNewUrlParser: true,
+		useFindAndModify: false,
+		useUnifiedTopology: true
 	},
   );
 
