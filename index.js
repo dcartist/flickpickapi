@@ -4,6 +4,7 @@ const passport = require("passport");
 const cors = require("cors");
 
 const MovieRouter = require("./routes/MovieRouter");
+const OldMovieRouter = require("./routes/OldMovies");
 const GenreRouter = require("./routes/GenreRouter");
 const UserRouter = require("./routes/UserRouter");
 
@@ -19,6 +20,7 @@ require("./config/passport")(passport);
 app.use("/api/movies/", MovieRouter);
 app.use("/api/genre/", GenreRouter);
 app.use("/api/user/", UserRouter);
+app.use("/api/old/", OldMovieRouter);
 
 app.set("port", process.env.PORT || 3000);
 
