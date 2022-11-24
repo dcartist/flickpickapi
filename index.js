@@ -22,8 +22,15 @@ app.use("/api/genre/", GenreRouter);
 app.use("/api/user/", UserRouter);
 app.use("/api/old/", OldMovieRouter);
 
-app.set("port", process.env.PORT || 3000);
 
-app.listen(app.get("port"), () => {
-  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port + '!');
 });
+
+// app.set("port", process.env.PORT || 3000);
+
+// app.listen(app.get("port"), () => {
+//   console.log(`✅ PORT: ${app.get("port")} 🌟`);
+// });
