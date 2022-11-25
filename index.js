@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const parser = require("body-parser");
 const passport = require("passport");
@@ -10,7 +11,7 @@ const UserRouter = require("./routes/UserRouter");
 
 const app = express();
 
-app.use(parser.json());
+// app.use(parser.json());
 app.use(cors());
 app.use(express.json());
 
