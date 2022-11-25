@@ -21,9 +21,9 @@ require("./config/passport")(passport);
 
 app.use("/api/movies/", MovieRouter);
 app.use("/api/genre/", GenreRouter);
-app.use("/api/old/genre/", GenreRouter);
 app.use("/api/user/", UserRouter);
 // app.use("/api/old/", OldMovieRouter); 
+app.use("/api/old/genre/", OldGenreRouter);
 app.use("/api/old/movies", OldMovieRouter);
 
 
